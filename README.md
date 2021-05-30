@@ -22,6 +22,7 @@ Cette commande va créer l'image docker du serveur apache et copier les fichiers
 ```
 Cette commande va démarrer le serveur apache. Lorsqu'un client se connectera au serveur reverse proxy en étant demo.res.ch comme host, et envoyant la requête get /,  le serveur renverra les fichiers affichant la page web.
 La page web charge tous les 2 secondes des données prevenant d'une api contenu dans l'image du dossier express-image
+
 ---
 ## Express-image
 ### Build image
@@ -60,7 +61,7 @@ docker run
     res/apache_rp
 ```
 
-Cette commande va démarre le serveur apache de reverse proxy.
+Cette commande va démarrer le serveur apache de reverse proxy.
 On lui donne deux variables d'environnement :
 - STATIC_APP : l'adresse ip docker du container apache_static, le serveur apache
 - DYNAMIC_APP : l'adresse ip docker du container express_dynamic, le serveur express
